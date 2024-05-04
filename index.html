@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            animation: moveHeader 5s infinite alternate; /* Header animation */
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .movie {
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            padding: 10px;
+            cursor: pointer;
+            position: relative;
+            width: 400px;
+            height: 400px; 
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .movie:hover .synopsis {
+            display: block;
+        }
+
+        .movie h2 {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        .movie p {
+            margin-bottom: 5px;
+            line-height: 1.2;
+            max-width: 100%;
+        }
+
+        .movie img {
+            width: 50%;
+            height: auto;
+            object-fit: contain;
+            margin-bottom: 10px;
+            
+
+        }
+
+        .synopsis {
+            display: none;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box; /* Include padding and border in the width calculation */
+
+        }
+
+        @keyframes moveHeader {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(20px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Movie Blog</h1>
+    </header>
+    <main>
+        <section id="movies">
+            <div class="movie">
+                <h2>Fallen Angels (1995)</h2>
+                <img class="left" src="img/fallen angels.jpeg" alt="Movie 1">
+                <div class="synopsis">
+                    <p> Director: Wong Kar-wai</p>
+                    <p>Genre: Crime/Romantic</p>
+                    <p>Synopsis:This film tells two intriguing parallel stories with five very different characters who end up crossing paths in Hong Kong.
+                    </p>
+                </div>
+            </div>
+            <div class="movie">
+                <h2>Movie 2</h2>
+                <img src="movie2.jpg" alt="Movie 2">
+                <div class="synopsis">
+                    <p>Genre: Comedy</p>
+                    <p>Synopsis: A funny comedy for the whole family.</p>
+                </div>
+            </div>
+            <div class="movie">
+                <h2>Movie 3</h2>
+                <img src="movie3.jpg" alt="Movie 3">
+                <div class="synopsis">
+                    <p>Genre: Drama</p>
+                    <p>Synopsis: A touching drama and love story.</p>
+                </div>
+            </div>
+            <!-- Add more movies here -->
+            <div class="movie">
+                <h2>Movie 4</h2>
+                <img src="movie4.jpg" alt="Movie 4">
+                <div class="synopsis">
+                    <p>Genre: Horror</p>
+                    <p>Synopsis: A chilling horror movie.</p>
+                </div>
+            </div>
+            <div class="movie">
+                <h2>Movie 5</h2>
+                <img src="movie5.jpg" alt="Movie 5">
+                <div class="synopsis">
+                    <p>Genre: Science Fiction</p>
+                    <p>Synopsis: An exciting space adventure.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Movie Blog</p>
+    </footer>
+</body>
+</html>
