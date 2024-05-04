@@ -6,84 +6,90 @@
     <title>Movie Blog</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-image: url('https://38.media.tumblr.com/0854394a2dcaf9307d7e03187d7149d5/tumblr_niw84qvke11r52he3o2_540.gif');
+            background-size: cover;
+            color: red; 
         }
 
         header {
-            background-color: #333;
-            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
             text-align: center;
             padding: 20px 0;
-            animation: moveHeader 5s infinite alternate; /* Header animation */
+        }
+
+        header h1 {
+            font-size: 3em;
+            color: red;
+            font-family: 'Pacifico', cursive;
+            text-transform: capitalize;
+            letter-spacing: 5px;
+            
         }
 
         main {
             padding: 20px;
         }
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
         .movie {
-            border: 1px solid #ccc;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
             margin-bottom: 20px;
-            padding: 10px;
-            cursor: pointer;
-            position: relative;
-            width: 400px;
-            height: 400px; 
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .movie:hover .synopsis {
-            display: block;
+            border: 1px solid #666;
         }
 
         .movie h2 {
-            margin-top: 0;
-            margin-bottom: 5px;
-        }
-
-        .movie p {
-            margin-bottom: 5px;
-            line-height: 1.2;
-            max-width: 100%;
+            font-size: 2em;
+            margin: 10px 0;
+            color: red; 
+            font-family: 'Pacifico', cursive;
+            text-transform: capitalize;
+            letter-spacing: 2px;
         }
 
         .movie img {
-            width: 50%;
-            height: auto;
-            object-fit: contain;
-            margin-bottom: 10px;
-            
-
+            max-width: 100%;
+            max-height: 200px; /* Altura máxima ajustada */
+            width: auto;
+            height: auto; 
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            display: block; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+            margin: 0 auto; /* Centra la imagen horizontalmente */
         }
 
-        .synopsis {
-            display: none;
+        .info {
+            padding: 20px;
+            position: relative; 
+        }
+
+        .info p {
+            margin: 5px 0;
+            font-size: 1.1em;
+            color: #ccc;
+        }
+
+        .info:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 10px;
-            border: 1px solid #ccc;
-            box-sizing: border-box; /* Include padding and border in the width calculation */
-
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            z-index: -1; 
+            border-radius: 5px; 
         }
 
-        @keyframes moveHeader {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(20px); }
-            100% { transform: translateY(0); }
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            padding: 10px 0;
+            color: #ccc;
         }
     </style>
 </head>
@@ -93,49 +99,43 @@
     </header>
     <main>
         <section id="movies">
-            <div class="movie">
+            <article class="movie">
                 <h2>Fallen Angels (1995)</h2>
-                <img class="left" src="img/fallen angels.jpeg" alt="Movie 1">
-                <div class="synopsis">
-                    <p> Director: Wong Kar-wai</p>
-                    <p>Genre: Crime/Romantic</p>
-                    <p>Synopsis:This film tells two intriguing parallel stories with five very different characters who end up crossing paths in Hong Kong.
-                    </p>
+                <img src="img/fallen angels.jpeg" alt="Fallen Angels">
+                <div class="info">
+                    <p>Director: Wong Kar-wai</p>
+                    <p>Genre: Crime/Romance</p>
+                    <p>Synopsis: This film tells two intriguing parallel stories with five very different characters who end up crossing paths in Hong Kong.</p>
                 </div>
-            </div>
-            <div class="movie">
-                <h2>Movie 2</h2>
-                <img src="movie2.jpg" alt="Movie 2">
-                <div class="synopsis">
-                    <p>Genre: Comedy</p>
-                    <p>Synopsis: A funny comedy for the whole family.</p>
+            </article>
+            <article class="movie">
+                <h2>In the Mood for Love (2000)</h2>
+                <img src="img/in_the_mood_for_love.jpeg" alt="In the Mood for Love">
+                <div class="info">
+                    <p>Director: Wong Kar-wai</p>
+                    <p>Genre: Romance/Drama</p>
+                    <p>Synopsis: Set in 1960s Hong Kong, this film explores the evolving relationship between two neighbors who suspect their spouses of infidelity.</p>
                 </div>
-            </div>
-            <div class="movie">
-                <h2>Movie 3</h2>
-                <img src="movie3.jpg" alt="Movie 3">
-                <div class="synopsis">
-                    <p>Genre: Drama</p>
-                    <p>Synopsis: A touching drama and love story.</p>
+            </article>
+            <article class="movie">
+                <h2>Chungking Express (1994)</h2>
+                <img src="img/chungking_express.jpeg" alt="Chungking Express">
+                <div class="info">
+                    <p>Director: Wong Kar-wai</p>
+                    <p>Genre: Drama/Romance</p>
+                    <p>Synopsis: Two stories about love intersect in Hong Kong's fast-paced and chaotic urban environment.</p>
                 </div>
-            </div>
-            <!-- Add more movies here -->
-            <div class="movie">
-                <h2>Movie 4</h2>
-                <img src="movie4.jpg" alt="Movie 4">
-                <div class="synopsis">
-                    <p>Genre: Horror</p>
-                    <p>Synopsis: A chilling horror movie.</p>
+            </article>
+            <article class="movie">
+                <h2>2046 (2004)</h2>
+                <img src="img/2046.jpeg" alt="2046">
+                <div class="info">
+                    <p>Director: Wong Kar-wai</p>
+                    <p>Genre: Romance/Drama/Sci-Fi</p>
+                    <p>Synopsis: This film explores themes of love, memory, and loss through multiple interconnected stories set in the future.</p>
                 </div>
-            </div>
-            <div class="movie">
-                <h2>Movie 5</h2>
-                <img src="movie5.jpg" alt="Movie 5">
-                <div class="synopsis">
-                    <p>Genre: Science Fiction</p>
-                    <p>Synopsis: An exciting space adventure.</p>
-                </div>
-            </div>
+            </article>
+            <!-- Agregar más películas aquí -->
         </section>
     </main>
     <footer>
