@@ -6,84 +6,149 @@
     <title>Movie Blog</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-image: url('https://38.media.tumblr.com/0854394a2dcaf9307d7e03187d7149d5/tumblr_niw84qvke11r52he3o2_540.gif');
+            background-size: cover;
+            color: rgb(158, 18, 18); 
+        }
+
+        #proyect {
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        #proyect h2 {
+            font-size: 2em;
+            color: red;
+            font-family: 'Arial', sans-serif;
+            text-transform: capitalize;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+         }
+
+         #proyect p {
+            font-size: 1.1em;
+            color: #faf5f5;
+            line-height: 1.5;
+            text-align: justify;
         }
 
         header {
-            background-color: #333;
-            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
             text-align: center;
             padding: 20px 0;
-            animation: moveHeader 5s infinite alternate; /* Header animation */
+        }
+
+        header h1 {
+            font-size: 3em;
+            color: red;
+            font-family: 'Arial', sans-serif;
+            text-transform: capitalize;
+            letter-spacing: 5px;
+            
         }
 
         main {
             padding: 20px;
         }
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
         .movie {
-            border: 1px solid #ccc;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
             margin-bottom: 20px;
-            padding: 10px;
-            cursor: pointer;
-            position: relative;
-            width: 400px;
-            height: 400px; 
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .movie:hover .synopsis {
-            display: block;
+            border: 1px solid #666;
+            overflow: hidden; 
+            position: relative; 
+            flex-wrap: nowrap;
+            overflow-x: auto;
         }
 
         .movie h2 {
-            margin-top: 0;
-            margin-bottom: 5px;
-        }
-
-        .movie p {
-            margin-bottom: 5px;
-            line-height: 1.2;
-            max-width: 100%;
-        }
+            font-size: 2em;
+            margin: 10px 20px; 
+            color: red;
+            font-family: 'Arial', sans-serif; 
+            text-transform: capitalize;
+            letter-spacing: 2px;
+                }
 
         .movie img {
-            width: 50%;
-            height: auto;
-            object-fit: contain;
-            margin-bottom: 10px;
+            max-width: 100%;
+            max-height: 200px; 
+            width: auto;
+            height: auto; 
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            display: inline-block;
             
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+            margin:  auto; 
+            margin-bottom: 10px; 
+            margin-right: 10px; 
+            margin-left: 10px;
 
         }
 
-        .synopsis {
-            display: none;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 10px;
-            border: 1px solid #ccc;
-            box-sizing: border-box; /* Include padding and border in the width calculation */
+        .info {
+            padding: 20px;
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0, 0, 0, 0.8); 
+            opacity: 0; 
+            transition: opacity 0.3s ease; 
+            overflow: scroll; 
+        }
+
+        .info p {
+            margin: 5px 0;
+            font-size: 1.1em;
+            color: #faf5f5;
+            margin-top: 10px; 
+            margin-bottom: 10px; 
+            margin-left: 10px; 
+            margin-right: 10px;
+            text-align: justify;
 
         }
 
-        @keyframes moveHeader {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(20px); }
-            100% { transform: translateY(0); }
+        
+
+        .movie:hover .info {
+            opacity: 1;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            padding: 10px 0;
+            color: #ccc;
+        }
+
+        /* Estilos responsivos */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .movie h2 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .movie img {
+                max-height: 150px; 
+            }
+
+            .info p {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
@@ -91,51 +156,80 @@
     <header>
         <h1>Movie Blog</h1>
     </header>
+
     <main>
+        <section id="proyect">
+            <h2> my first website </h2>
+            <p> Hi there! Welcome to my first webpage. I've taken inspiration from the Tumblr vibes of 2014 
+                to create a space where I can share some of my favorite movies with you. Take a look around, 
+                check out the recommendations, and I hope you enjoy both the content and the style of the site!
+            </p>
+        </section>
+
         <section id="movies">
-            <div class="movie">
+            <article class="movie">
                 <h2>Fallen Angels (1995)</h2>
-                <img class="left" src="img/fallen angels.jpeg" alt="Movie 1">
-                <div class="synopsis">
-                    <p> Director: Wong Kar-wai</p>
-                    <p>Genre: Crime/Romantic</p>
-                    <p>Synopsis:This film tells two intriguing parallel stories with five very different characters who end up crossing paths in Hong Kong.
-                    </p>
+                <img src="img/fallen_angels/1.jpeg" alt="Fallen Angels">
+                <img src="img/fallen_angels/2.jpeg" alt="Fallen Angels">
+                <img src="img/fallen_angels/8.jpeg" alt="Fallen Angels">
+                <img src="img/fallen_angels/4.jpeg" alt="Fallen Angels">
+                <img src="img/fallen_angels/5.jpeg" alt="Fallen Angels">
+                <img src="img/fallen_angels/6.jpeg" alt="Fallen Angels">
+                <img src="img/fallen_angels/7.jpeg" alt="Fallen Angels">
+                <img src="img/fallen_angels/3.jpeg" alt="Fallen Angels">
+
+
+                <div class="info">
+                    <p><b>Director:</b> Wong Kar-wai</p>
+                    <p><b>Genre:</b> Crime/Romance</p>
+                    <p><b>Release Year:</b> 1995</p>
+                    <p><b>Synopsis:</b> "Fallen Angels" is a mesmerizing film directed by Wong Kar-wai that delves into the gritty underworld of crime and romance in Hong Kong. Set against the neon-lit streets of the city, the film weaves together the stories of two intriguing characters: a hitman named Wong Chi-Ming, known as "The Killer," and a mysterious woman named Blondie, who works as a professional thief. As their paths intertwine, they navigate through a world of loneliness, longing, and lost connections. Through stunning cinematography and a hauntingly atmospheric soundtrack, Wong Kar-wai creates a visually stunning and emotionally resonant cinematic experience.
+                    <p><b>Cast:</b>Leon Lai as Wong Chi-Ming, Michelle Reis as Blondie, Takeshi Kaneshiro as He Zhiwu, Charlie Yeung as Charlie </p>
+                    
+                          
                 </div>
-            </div>
-            <div class="movie">
-                <h2>Movie 2</h2>
-                <img src="movie2.jpg" alt="Movie 2">
-                <div class="synopsis">
-                    <p>Genre: Comedy</p>
-                    <p>Synopsis: A funny comedy for the whole family.</p>
+            </article>
+            <article class="movie">
+                <h2>All About Lily Chou-Chou (2001)</h2>
+                <img src="img/allabout/1.jpeg" alt="All About Lili Chou-Chou">
+                <img src="img/allabout/2.jpeg" alt="All About Lili Chou-Chou">
+                <img src="img/allabout/3.jpeg" alt="All About Lili Chou-Chou">
+                <img src="img/allabout/4.jpeg" alt="All About Lili Chou-Chou">
+                <img src="img/allabout/5.jpeg" alt="All About Lili Chou-Chou">
+                <img src="img/allabout/6.jpeg" alt="All About Lili Chou-Chou">
+                <img src="img/allabout/7.jpeg" alt="All About Lili Chou-Chou">
+                <img src="img/allabout/9.jpeg" alt="All About Lili Chou-Chou">
+
+
+                <div class="info">
+                    <p><b>Director:</b> Shunji Iwai</p>                   
+                    <p><b>Genre:</b> Drama</p>
+                    <p><b>Release Year:</b>2001</p>
+                    <p><b>Synopsis:</b>"All About Lily Chou-Chou" is a captivating Japanese drama directed by Shunji Iwai. The film follows the lives of high school students who find solace in the music of the enigmatic pop idol Lily Chou-Chou. As they navigate adolescence, they immerse themselves in an online community where they discuss and obsess over Lily Chou-Chou's music, seeking both connection and escape.
+
+                        The story centers on Yuichi Hasumi, a quiet boy struggling with bullying, and Hoshino Blue, a charismatic but troubled student. Through a nonlinear narrative and dreamlike cinematography, the film explores themes of alienation, identity, and the search for meaning in a changing world.</p>
+                    <p><b>Cast:</b>Hayato Ichihara, Shûgo Oshinari, Ayumi Ito</p>    
                 </div>
-            </div>
-            <div class="movie">
-                <h2>Movie 3</h2>
-                <img src="movie3.jpg" alt="Movie 3">
-                <div class="synopsis">
-                    <p>Genre: Drama</p>
-                    <p>Synopsis: A touching drama and love story.</p>
+            </article>
+            <article class="movie">
+                <h2>Chungking Express (1994)</h2>
+                <img src="img/chungking_express.jpeg" alt="Chungking Express">
+                <div class="info">
+                    
+                    <p>Genre: Drama/Romance</p>
+                    <p>Synopsis: Two stories about love intersect in Hong Kong's fast-paced and chaotic urban environment.</p>
                 </div>
-            </div>
-            <!-- Add more movies here -->
-            <div class="movie">
-                <h2>Movie 4</h2>
-                <img src="movie4.jpg" alt="Movie 4">
-                <div class="synopsis">
-                    <p>Genre: Horror</p>
-                    <p>Synopsis: A chilling horror movie.</p>
+            </article>
+            <article class="movie">
+                <h2>2046 (2004)</h2>
+                <img src="img/2046.jpeg" alt="2046">
+                <div class="info">
+                    <p>Director: Wong Kar-wai</p>
+                    <p>Genre: Romance/Drama/Sci-Fi</p>
+                    <p>Synopsis: This film explores themes of love, memory, and loss through multiple interconnected stories set in the future.</p>
                 </div>
-            </div>
-            <div class="movie">
-                <h2>Movie 5</h2>
-                <img src="movie5.jpg" alt="Movie 5">
-                <div class="synopsis">
-                    <p>Genre: Science Fiction</p>
-                    <p>Synopsis: An exciting space adventure.</p>
-                </div>
-            </div>
+            </article>
+            <!-- Agregar más películas aquí -->
         </section>
     </main>
     <footer>
