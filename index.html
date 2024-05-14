@@ -4,157 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Blog</title>
-    <style>
-        body {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('https://64.media.tumblr.com/0854394a2dcaf9307d7e03187d7149d5/tumblr_niw84qvke11r52he3o2_540.gif');
-            background-size: cover;
-            color: rgb(164, 221, 138); 
-        }
 
-        #proyect { 
-            border-radius: 5px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        #proyect h2 {
-            font-size: 2em;
-            color: rgb(169, 196, 17);
-            font-family: 'Arial', sans-serif;
-            text-transform: capitalize;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-         }
-
-         #proyect p {
-            font-size: 1.1em;
-            color: #ffffff;
-            line-height: 1.5;
-            text-align: justify;
-        }
-
-        header {
-            background-color: rgba(0, 0, 0, 0.5);
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        header h1 {
-            font-size: 3em;
-            color: rgb(190, 159, 19);
-            font-family: 'Arial', sans-serif;
-            text-transform: capitalize;
-            letter-spacing: 5px;
-            
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        .movie {
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-            margin-bottom: 20px;
-            border: 1px solid hsl(103, 92%, 14%);
-            overflow: hidden; 
-            position: relative; 
-            flex-wrap: nowrap;
-            overflow-x: auto;
-        }
-
-        .movie h2 {
-            font-size: 2em;
-            margin: 10px 20px; 
-            color: rgb(201, 9, 9);
-            font-family: 'Arial', sans-serif; 
-            text-transform: capitalize;
-            letter-spacing: 2px;
-                }
-
-        .movie img {
-            max-width: 100%;
-            max-height: 200px; 
-            width: auto;
-            height: auto; 
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-            display: inline-block;
-            
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
-            margin:  auto; 
-            margin-bottom: 10px; 
-            margin-right: 10px; 
-            margin-left: 10px;
-
-        }
-
-        .info {
-            padding: 20px;
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            background-color: rgba(0, 0, 0, 0.8); 
-            opacity: 0; 
-            transition: opacity 0.3s ease; 
-            overflow: scroll; 
-        }
-
-        .info p {
-            margin: 5px 0;
-            font-size: 1.1em;
-            color: #faf5f5;
-            margin-top: 10px; 
-            margin-bottom: 10px; 
-            margin-left: 10px; 
-            margin-right: 10px;
-            text-align: justify;
-
-        }
-
-        
-
-        .movie:hover .info {
-            opacity: 1;
-        }
-
-        footer {
-            background-color: rgba(0, 0, 0, 0.5);
-            text-align: center;
-            padding: 10px 0;
-            color: #ccc;
-        }
-
-        iframe {
-        padding-bottom: 100px;
-        }
-
-        /* Estilos responsivos */
-        @media screen and (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-
-            .movie h2 {
-                font-size: 1.5em;
-            }
-        }
-
-        @media screen and (max-width: 576px) {
-            .movie img {
-                max-height: 150px; 
-            }
-
-            .info p {
-                font-size: 1em;
-            }
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
     <header>
@@ -294,6 +145,20 @@
             <p><b>HERE THE TRAILER</b></p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/5Fxa5NuVrqU?si=uCYJQ4qXhdlXbErU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: block; margin: 0 auto;"></iframe>
 
+
+
+            <article class="movie">
+                <h2></h2>
+                <img src="img/love_exposure/1.jpeg" alt="Oldboy">
+                
+    
+                <div class="info">
+                    <p>Director: Wong Kar-wai</p>
+                    <p>Genre: Romance/Drama/Sci-Fi</p>
+                    <p>Synopsis: This film explores themes of love, memory, and loss through multiple interconnected stories set in the future.</p>
+                </div>
+            </article>
+            <p><b>HERE THE TRAILER</b></p>
 
            
         </section>
