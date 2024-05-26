@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/1.jpeg">
+
+</head>
+<body>
+    <header>
+        <h1>Recommendation Form</h1>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Did you like this blog?</h2>
+            <p>If you want to recommend a movie, feel free to put it here.</p>
+            <form id="recommendation-form" action="submit_form.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="movie">Recommended Movie:</label>
+                <input type="text" id="movie" name="movie" required>
+
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" required></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; mdioasko's blog</p>
+    </footer>
+</body>
+</html>

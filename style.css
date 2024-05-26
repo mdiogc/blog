@@ -4,7 +4,7 @@ body {
     padding: 0;
     background-image: url('https://64.media.tumblr.com/0854394a2dcaf9307d7e03187d7149d5/tumblr_niw84qvke11r52he3o2_540.gif');
     background-size: cover;
-    color: rgb(164, 221, 138); 
+    color: rgb(113, 191, 77); 
 }
 
 #proyect { 
@@ -146,4 +146,164 @@ padding-bottom: 100px;
     .info p {
         font-size: 1em;
     }
+}
+
+.red-form {
+    color: red; /* Cambia el color del texto a rojo */
+}
+
+.red-form label {
+    color: red; /* Cambia el color de las etiquetas a rojo */
+}
+
+.red-form input[type="text"],
+.red-form input[type="email"],
+.red-form textarea,
+.red-form button {
+    border-color: red; /* Cambia el color del borde de los campos de entrada y del botón a rojo */
+}
+
+.red-form button {
+    background-color: red; /* Cambia el color de fondo del botón a rojo */
+    color: white; /* Cambia el color del texto del botón a blanco */
+}
+
+.red-form button:hover {
+    background-color: darkred; /* Cambia el color de fondo del botón cuando se pasa el cursor sobre él */
+}
+
+/* Estilos para el contenedor y botón de recomendación */
+#recommendation {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 5px; /* Esquinas redondeadas */
+    text-align: center; /* Centra el contenido */
+    margin-bottom: 20px;
+    border: 1px solid rgba(113, 191, 77, 0); /* Borde con el color principal */
+}
+
+#recommendation h2 {
+    font-size: 2em;
+    color: rgb(60, 209, 10); /* Color del texto */
+    font-family: 'Arial', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+#recommendation .button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #0e9739; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 4px; /* Esquinas redondeadas */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambiar el cursor a puntero al pasar sobre el botón */
+    border: none; /* Sin borde */
+}
+
+#recommendation .button:hover {
+    background-color: #0c772e; /* Color de fondo más oscuro al pasar el cursor */
+}
+
+
+
+
+
+/*Debajo está el css de la segunda página*/
+
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://64.media.tumblr.com/0854394a2dcaf9307d7e03187d7149d5/tumblr_niw84qvke11r52he3o2_540.gif');
+    background-size: cover;
+    color: rgb(113, 191, 77); 
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 3em;
+    color: rgb(255, 0, 0);
+    font-family: 'Arial', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+}
+
+main {
+    padding: 20px;
+}
+
+.form-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-container h2 {
+    font-size: 2em;
+    color: rgb(64, 185, 33);
+    font-family: 'Arial', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.form-container p {
+    font-size: 1.1em;
+    color: #ffffff;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    display: block;
+    font-size: 1em;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-container input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4995ad;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #3c7a8d;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 10px 0;
+    color: #ccc;
 }
